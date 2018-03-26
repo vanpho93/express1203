@@ -12,6 +12,8 @@ const wordSchema = new mongoose.Schema({
 
 const Word = mongoose.model('Word', wordSchema);
 
+module.exports = { Word };
+
 // const word = new Word({ en: 'Four', vn: 'Bon' });
 // word.save()
 // .then(w => console.log(w))
