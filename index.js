@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const { Word } = require('./Word');
 
 // const parser = bodyParser.urlencoded({ extended: false });
 const parser = bodyParser.json();
 
 const app = express();
+app.use(cors());
 app.use(parser);
 
 app.get('/word', (req, res) => {
