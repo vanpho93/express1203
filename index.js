@@ -2,7 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { Word } = require('./Word');
 
-const parser = bodyParser.urlencoded({ extended: false });
+// const parser = bodyParser.urlencoded({ extended: false });
+const parser = bodyParser.json();
 
 const app = express();
 app.use(parser);
@@ -41,4 +42,4 @@ app.put('/word/:_id', (req, res) => {
         .catch(error => res.send({ success: false, error: error.message }));
 });
 
-app.listen(3000, () => console.log('Server started.'));
+app.listen(4000, () => console.log('Server started.'));
